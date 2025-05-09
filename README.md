@@ -2,7 +2,7 @@
 
 **Summary of project:** This repository holds my attempt at applying a decision tree and random forest to data on (gilled) mushrooms to determine if they are poisonous or not, taken from "Mushroom Classification" on Kaggle (https://www.kaggle.com/datasets/uciml/mushroom-classification) .
 
-**Overview:** While no specifics are given, it's obvious we would want to try and predict the edibility of the mushrooms. The entire data set is categorical, so histogramming the features has helped to get a good idea of what features show up more as poisonous or edible. Plotting the entropy of each feature has also helped to narrow down what features give the best indication of edibility, this helps also with the decision tree and forest as it is a criterion/parameter it goes off of. Using both have predicted 97% accuracy for edible mushrooms and 99% for poisonous. 
+**Overview:** This project aims to predict the edibility of mushrooms using classification models, given that the dataset categorizes mushrooms as either edible or poisonous. Since all features in the dataset are categorical, visualizing feature distributions through histograms has been useful for identifying patterns related to edibility. Entropy analysis further helped determine which features provide the most information gain, guiding feature selection for the models. Decision Tree and Random Forest classifiers were both used, each achieving high levels of accuracy—approximately 97% for edible and 99% for poisonous classifications. 
 
 #### Summary of Work 
 
@@ -42,7 +42,7 @@ I’ve actually split these features into two separate groups. One of higher-lev
 
 ![](Mushroom_correlation.png)
 
-* **The heat map gives us a great visual for seeing how correlated such things as odor are with being poisonous.** 
+* **The heatmap above visualizes the correlation matrix of the encoded features. It reinforces feature selection decisions by showing that certain variables—such as odor—exhibit strong correlations with mushroom edibility, as seen in the first row/column.** 
 
 * **Problem Formulation:** Much of what I’ve done in preprocessing is actually our problem formulation. Choosing certain features that could give the most insight into what characteristics indicate edibility. For this I’ve used a Decision Tree and Random Forest, since both also go off of entropy as criteria.
 
